@@ -71,7 +71,7 @@ robot.on("messageDelete", (msg) => {
 
 robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
-	message.channel.send('К командам бота обращаться к @Ролтон Тян#0207')
+	message.channel.send('Ты кто такой, тебя не звали, иди нафиг )')
 	    console.log(`${message.author.displayName} прописал команду help`)
         };
 });
@@ -90,12 +90,35 @@ robot.on('message', message => {
     if(message.content.startsWith(p + 'say')) {
 	    message.delete()
 				if(message.author.id !== '405258156063850497')
-      return message.reply("Соси,но это команда лично для Пакетика)!")
+      
         let say = message.content.slice((p + 'say').length);
         message.channel.send(say);
 	     console.log(`${message.author.displayName} сказал` + say)
     }
 });
+
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'img')) {
+		const embed = new Discord.RichEmbed()
+		.setTitle('Аватар пользователя:')
+            .setColor('RANDOM')
+		 .setImage(message.mentions.users.first().avatarURL)
+		 message.channel.send({embed})
+		console.log('Кому то понадобился аватар')
+	}
+});
+
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'nick')) {
+var mentions1 = message.mentions
+const vtes = message.content.slice(28);
+if(message.author.id !== '292178755760422915')
+			     return message.reply("Для особо ленивых администраторов")
+message.delete()
+message.mentions.members.first().setNickname(vtes)
+console.log(vtes) 
+
+    }});
 
 
 robot.login(process.env.BOT_TOKEN);
