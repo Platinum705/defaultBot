@@ -1,0 +1,2 @@
+# defaultBot
+Hosting
