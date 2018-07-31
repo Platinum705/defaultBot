@@ -90,7 +90,7 @@ robot.on('message', message => {
     if(message.content.startsWith(p + 'say')) {
 	    message.delete()
 				if(message.author.id !== '405258156063850497')
-      
+      return message.reply("Только ПАКетик может играться с этой командой")
         let say = message.content.slice((p + 'say').length);
         message.channel.send(say);
 	     console.log(`${message.author.displayName} сказал` + say)
