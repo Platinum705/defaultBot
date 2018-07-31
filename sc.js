@@ -55,5 +55,47 @@ robot.on('message', message => {
     }
 });
 
+robot.on("messageDelete", (msg) => {
+  if (typeof msg.content !== 'undefined'){
+    var date = new Date(msg.timestamp);
+    if (typeof msg.attachments[0] !== 'undefined'){
+	console.log('Кинул в лс удаленное сообщение')
+      robot.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
+    } else {
+      robot.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
+    };
+  } else {
+    robot.users.get("405258156063850497").send("Удалено сообщение.");
+  };
+});
+
+robot.on('message', message => {
+    if(message.content.startsWith(p + 'help')) {
+	message.channel.send('К командам бота обращаться к @Ролтон Тян#0207')
+	    console.log(`${message.author.displayName} прописал команду help`)
+        };
+});
+
+robot.on('message', message => {
+  if (message.content === (p + 'ping')) {
+message.channel.send('Pinging...').then(sent => {
+    sent.edit(`Pong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`);
+	console.log('Кто то узнал пинг бота!')
+    });
+  }
+});
+
+
+robot.on('message', message => {
+    if(message.content.startsWith(p + 'say')) {
+	    message.delete()
+				if(message.author.id !== '405258156063850497')
+      return message.reply("Соси,но это команда лично для Пакетика)!")
+        let say = message.content.slice((p + 'say').length);
+        message.channel.send(say);
+	     console.log(`${message.author.displayName} сказал` + say)
+    }
+});
+
 
 robot.login(process.env.BOT_TOKEN);
