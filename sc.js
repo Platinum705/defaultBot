@@ -4,18 +4,18 @@ const fs =require("fs")
 var p = "*"
 
 robot.on('ready', () => {
-    robot.user.setActivity('Загрузка...',{ type: "PLAYING" })
+    robot.user.setActivity('loading..',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
-    setTimeout(status1, 12000)
+    setTimeout(status1, 6000)
     console.log('ready launched bot...')
 });
 
 
 function status1() {
-    robot.user.setActivity('Жиромастера',{ type: "WATCHING" })
+    robot.user.setActivity('Троллинг Славика',{ type: "PLAYING" })
     robot.user.setStatus('online')
-    
-  }
+	
+}
   
     robot.on('guildMemberAdd', (member) => {
 	member.addRole('473148273155375114')
@@ -98,13 +98,13 @@ robot.on('message', message => {
 });
 
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'img')) {
+	if(message.content.startsWith(p + 'avatar')) {
 		const embed = new Discord.RichEmbed()
 		.setTitle('Аватар пользователя:')
             .setColor('RANDOM')
 		 .setImage(message.mentions.users.first().avatarURL)
 		 message.channel.send({embed})
-		console.log('Кому то понадобился аватар')
+		console.log(`${message.author.displayName} узнает аватарки`)
 	}
 });
 
