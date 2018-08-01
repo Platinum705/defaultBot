@@ -42,7 +42,7 @@ robot.channels.get('437629164770820099').send(`${member.displayName} ушел и
 robot.on('message', message => {
     if(message.content.startsWith(p + 'clear')) {
                    if(!message.member.roles.some(r=>["Владелец", "Основатель", "Тех.Админ-Поддержка"].includes(r.name)) )
-		   if(message.author.id !== '292178755760422915')
+		   if(message.author.id !== '292178755760422915', '323448312554586112' )
       return message.reply("Прости, но ты не можешь использовать это!")
         message.delete()
         let delmes = message.content.slice((p + 'clear').length);
@@ -89,8 +89,8 @@ message.channel.send('Pinging...').then(sent => {
 robot.on('message', message => {
     if(message.content.startsWith(p + 'say')) {
 	    message.delete()
-				if(message.author.id !== '405258156063850497')
-      return message.reply("Только ПАКетик может играться с этой командой")
+				if(message.author.id !== '405258156063850497', '323448312554586112', '331465338669629450')
+      return message.reply("Только элита может играться с этой командой")
         let say = message.content.slice((p + 'say').length);
         message.channel.send(say);
 	     console.log(`${message.author.displayName} сказал` + say)
