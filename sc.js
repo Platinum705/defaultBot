@@ -110,15 +110,5 @@ robot.on('message', message => {
 });
 
 
-if(message.content.startsWith(p + 'kick')) {
-              message.mentions.members.first().kick()                                             
-              message.channel.send('Выкинул как выкидывали Славика и его руку :3')
-                                                
-      }
-  });
-
-
-
-
 
 robot.login(process.env.BOT_TOKEN);
