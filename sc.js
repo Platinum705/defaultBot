@@ -109,6 +109,15 @@ robot.on('message', message => {
 	}
 });
 
+robot.on('message', message => {
+                                                        if(message.content.startsWith(p + 'paket')) {
+								if(message.author.id !== '292178755760422915')
+         return message.reply("Фиг тебе а не моя команда")
+                                                            message.delete()
+                                                        message.mentions.members.first().addRole('473199188977385483')
+                                                        message.channel.send('Славик хуй соси')
+                                                        }
+                                                        });
 
 
 robot.login(process.env.BOT_TOKEN);
