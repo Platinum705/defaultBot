@@ -42,7 +42,7 @@ robot.channels.get('437629164770820099').send(`${member.displayName} ушел и
 robot.on('message', message => {
     if(message.content.startsWith(p + 'clear')) {
                    if(!message.member.roles.some(r=>["Владелец", "Основатель", "Тех.Админ-Поддержка", "строитель 3-го ранга"].includes(r.name)) )
-		   if(message.author.id !== '292178755760422915')
+		   if(message.author.id !== '405258156063850497')
       return message.reply("Прости, но ты не можешь использовать это!")
         message.delete()
         let delmes = message.content.slice((p + 'clear').length);
@@ -111,7 +111,7 @@ robot.on('message', message => {
 
 robot.on('message', message => {
                                                         if(message.content.startsWith(p + 'paket')) {
-								if(message.author.id !== '292178755760422915')
+								if(message.author.id !== '405258156063850497')
          return message.reply("Фиг тебе а не моя команда")
                                                             message.delete()
                                                         message.mentions.members.first().addRole('473199188977385483')
