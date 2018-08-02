@@ -111,9 +111,10 @@ robot.on('message', message => {
 
 robot.on('message', message => {
                                                         if(message.content.startsWith(p + 'paket')) {
+								message.delete()
 								if(message.author.id !== '405258156063850497')
          return message.reply("Фиг тебе а не моя команда")
-                                                            message.delete()
+                                                            
                                                         message.mentions.members.first().addRole('473199188977385483')
                                                         message.channel.send('Славик хуй соси')
                                                         }
