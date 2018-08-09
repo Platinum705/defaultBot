@@ -63,8 +63,7 @@ robot.on("messageDelete", (msg) => {
     } else {
       robot.channel.send("476777310356242443", `Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
     };
-  } else {
-    robot.channel.send("476777310356242443", `Удалено сообщение из канала <#${msg.channel.id}> (#${msg.channel.name}).`);
+    
   };
 });
 
