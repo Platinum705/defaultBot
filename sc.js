@@ -109,25 +109,23 @@ robot.on('message', message => {
 	}
 });
 
-robot.on('message', message => {
-        if(message.content.startsWith(p + 'choose')) {
-      console.log(`Выбрал за ${msg.author.username}, что делать`);
-      var variants = args.join(" ").split(" | ");
-      var result = `Я решил за ${msg.author.username}, что делать:\n`;
-      for (let i = 0; i < variants.length; i++) {
-        variants[i] = variants[i].split(',').join(' ')
-        result = result + `${variants[i]} - ${Math.floor(Math.random() * 100) + 1}% необходимости\n`;
-      }
-      return result;
-    } {
-      argsRequired: true,
-      description: "Выбрать что-нибудь",
-      fullDescription: "Решить за Вас, что поделать или выбрать",
-      usage: "Синтаксис: *choose <вариант 1> | [вариант 2] | [вариант  n]",
-      aliases: ["выбор", "выбери", "выбрать"],
-      deleteCommand: true
-    }});
-    
+robot.on("choose", (msg, args) => {
+  console.log(`Выбрал за ${msg.author.username}, что делать`);
+  var variants = args.join(" ").split(" | ");
+  var result = `Я решил за ${msg.author.username}, что делать:\n`;
+  for (let i = 0; i < variants.length; i++) {
+    variants[i] = variants[i].split(',').join(' ')
+    result = result + `${variants[i]} - ${Math.floor(Math.random() * 100) + 1}% необходимости\n`;
+  }
+  return result;
+}, {
+  argsRequired: true,
+  description: "Выбрать что-нибудь",
+  fullDescription: "Решить за Вас, что поделать или выбрать",
+  usage: "Синтаксис: *choose <вариант 1> | [вариант 2] | [вариант  n]",
+  aliases: ["выбор", "выбери", "выбрать"],
+  deleteCommand: true
+});
 
 
 
