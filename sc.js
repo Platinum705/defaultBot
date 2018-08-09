@@ -59,11 +59,13 @@ robot.on("messageDelete", (msg) => {
   if (typeof msg.content !== 'undefined'){
     var date = new Date(msg.timestamp);
     if (typeof msg.attachments[0] !== 'undefined'){
-      robot.channel.send("476777310356242443" `Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
+	console.log('Кинул в лс удаленное сообщение')
+      robot.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
     } else {
-      robot.channel.send("476777310356242443", `Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
+      robot.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
     };
-    
+  } else {
+    robot.users.get("405258156063850497").send("Удалено сообщение.");
   };
 });
 
@@ -108,6 +110,15 @@ robot.on('message', message => {
 	}
 });
 
+
+robot.on('message', message => {
+    if(message.content === (p + 'test')) {
+	var messagelol = 'Славик дурак, а ты что думал?'
+	    message.channel.send(messagelol);
+	    message.react('380571016994226186')
+	     console.log(`${message.author.displayName} чекнул бота на роботоспособность`)
+    }
+});
 
 
 robot.login(process.env.BOT_TOKEN);
