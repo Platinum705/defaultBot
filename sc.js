@@ -114,8 +114,7 @@ robot.on('message', message => {
 robot.on('message', message => {
     if(message.content === (p + 'test')) {
 	var messagelol = 'Славик дурак, а ты что думал?'
-	    message.channel.send(messagelol);
-	    message.react('380571016994226186')
+	    message.channel.send(messagelol)
 	     console.log(`${message.author.displayName} чекнул бота на роботоспособность`)
     }
 });
