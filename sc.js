@@ -59,9 +59,9 @@ robot.on("messageDelete", (msg) => {
   if (typeof msg.content !== 'undefined'){
     var date = new Date(msg.timestamp);
     if (typeof msg.attachments[0] !== 'undefined'){
-      robot.channel.send("476777310356242443" `Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()} в <#${msg.channel.id}> (#${msg.channel.name}): "${msg.content}". К сообщению было что-то прикреплено.`);
+      robot.channel.send("476777310356242443" `Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
     } else {
-      robot.channel.send("476777310356242443", `Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()} в <#${msg.channel.id}> (#${msg.channel.name}): "${msg.content}".`);
+      robot.channel.send("476777310356242443", `Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
     };
   } else {
     robot.channel.send("476777310356242443", `Удалено сообщение из канала <#${msg.channel.id}> (#${msg.channel.name}).`);
