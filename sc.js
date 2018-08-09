@@ -59,15 +59,15 @@ robot.on("messageDelete", (msg) => {
   if (typeof msg.content !== 'undefined'){
     var date = new Date(msg.timestamp);
     if (typeof msg.attachments[0] !== 'undefined'){
-	console.log('Кинул в лс удаленное сообщение')
-      robot.users.get("476777310356242443").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
+      robot.createMessage("476777310356242443" `Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()} в <#${msg.channel.id}> (#${msg.channel.name}): "${msg.content}". К сообщению было что-то прикреплено.`);
     } else {
-      robot.users.get("476777310356242443").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
+      robot.createMessage("476777310356242443", `Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()} в <#${msg.channel.id}> (#${msg.channel.name}): "${msg.content}".`);
     };
   } else {
-    robot.users.get("476777310356242443").send("Удалено сообщение.");
+    robot.createMessage("476777310356242443", `Удалено сообщение из канала <#${msg.channel.id}> (#${msg.channel.name}).`);
   };
 });
+
 
 robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
