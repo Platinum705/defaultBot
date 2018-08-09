@@ -110,15 +110,25 @@ robot.on('message', message => {
 });
 
 robot.on('message', message => {
-                                                        if(message.content.startsWith(p + 'paket')) {
-								message.delete()
-								if(message.author.id !== '405258156063850497')
-         return message.reply("Фиг тебе а не моя команда")
-                                                            
-                                                        message.mentions.members.first().addRole('473199188977385483')
-                                                        message.channel.send('Славик хуй соси')
-                                                        }
-                                                        });
+        if(message.content.startsWith(p + 'choose')) {
+      console.log(`Выбрал за ${msg.author.username}, что делать`);
+      var variants = args.join(" ").split(" | ");
+      var result = `Я решил за ${msg.author.username}, что делать:\n`;
+      for (let i = 0; i < variants.length; i++) {
+        variants[i] = variants[i].split(',').join(' ')
+        result = result + `${variants[i]} - ${Math.floor(Math.random() * 100) + 1}% необходимости\n`;
+      }
+      return result;
+    } {
+      argsRequired: true,
+      description: "Выбрать что-нибудь",
+      fullDescription: "Решить за Вас, что поделать или выбрать",
+      usage: "Синтаксис: *choose <вариант 1> | [вариант 2] | [вариант  n]",
+      aliases: ["выбор", "выбери", "выбрать"],
+      deleteCommand: true
+    }});
+    
+
 
 
 robot.login(process.env.BOT_TOKEN);
