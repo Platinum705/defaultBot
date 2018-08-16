@@ -1,4 +1,4 @@
-var p = "*"
+var file = fs.readFileSync('sc.js', 'utf8')
 
 robot.on('message', message => {
             if(message.content.startsWith(p + 'rand')) {
