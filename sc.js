@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const robot = new Discord.Client();
 const fs = require("fs")
 var p = "*"
-
+var fileReaded = fs.readFileSync('random.js', 'utf8')
 
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
@@ -120,20 +120,7 @@ robot.on('message', message => {
     }
 });
 
-robot.on('message', message => {
-            if(message.content.startsWith(p + 'rand')) {
-            message.delete()
-var randomNumber = Math.floor(Math.random() * 100) + 0;
-		    
-function getRandomArbitary(min, max)
-{
 
-
-return Math.floor(Math.random() * 100) + 0
-}
-message.channel.send(randomNumber)
-
-  }});
 
 
 robot.login(process.env.BOT_TOKEN);
