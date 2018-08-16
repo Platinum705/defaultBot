@@ -11,6 +11,6 @@ function getRandomArbitary(min, max)
 
 return Math.floor(Math.random() * 100) + 0
 }
-message.channel.send(randomNumber\n + Messages)
+message.channel.send("You rolled\n" + randomNumber)
 
   }});
