@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const robot = new Discord.Client();
 const fs = require("fs")
 var p = "*"
-var fileReaded = fs.readFileSync('random.js', 'utf8')
+fs.readFileSync('random.js')
 
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
