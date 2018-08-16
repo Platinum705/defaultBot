@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const robot = new Discord.Client();
 const fs = require("fs")
 var p = "*"
+var fs = require('fs')
 fs.readFileSync('random.js')
 
 robot.on('ready', () => {
