@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const robot = new Discord.Client();
 const fs = require("fs")
 var p = "*"
-const = require("./random")
+require("./random")
 
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
