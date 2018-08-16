@@ -10,6 +10,6 @@ function getRandomArbitary(min, max)
 
 return Math.floor(Math.random() * 100) + 0
 }
-message.message.reply('rolled' randomNumber)
+message.message.reply(randomNumber)
 
   }});
