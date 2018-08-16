@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const robot = new Discord.Client();
 const fs = require("fs")
 var p = "*"
-require("./random")
+
 
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
@@ -119,6 +119,15 @@ robot.on('message', message => {
 	     console.log(`${message.author.displayName} чекнул бота на роботоспособность`)
     }
 });
+
+robot.on('message', message => {
+            if(message.content.startsWith(p + 'rand')) {
+            
+var randomNumber = Math.floor(Math.random() * 100) + 0;
+
+message.channel.send(randomNumber)
+
+  }});
 
 
 robot.login(process.env.BOT_TOKEN);
