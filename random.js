@@ -1,4 +1,3 @@
-var Messages = "You rolled"
 
 robot.on('message', message => {
             if(message.content.startsWith(p + 'rand')) {
@@ -11,6 +10,6 @@ function getRandomArbitary(min, max)
 
 return Math.floor(Math.random() * 100) + 0
 }
-message.channel.send("You rolled\n" + randomNumber)
+message.channel.send("You rolled" + randomNumber)
 
   }});
