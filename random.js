@@ -1,4 +1,4 @@
-const = require("./sc")
+const require = require("./sc")
 
 robot.on('message', message => {
             if(message.content.startsWith(p + 'rand')) {
