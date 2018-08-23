@@ -13,7 +13,7 @@ robot.on('ready', () => {
 
 
 function status1() {
-    robot.user.setActivity('Троллинг Славика',{ type: "PLAYING" })
+    robot.user.setActivity('Ловлю покемонов',{ type: "PLAYING" })
     robot.user.setStatus('online')
 	
 }
@@ -26,7 +26,7 @@ function status1() {
 robot.on('guildMemberAdd', (member) => {
     console.log(`${member.displayName} вступил в ${member.guild.name}.`)
 if(member.guild.id === "437629164770820097"){
-robot.channels.get('437632335307866122').send(`Приветствуем нового члена семьи EvereonRPG! - ${member.displayName}\n Остерегайся дикого Славика`);
+robot.channels.get('437632335307866122').send(`Приветствуем нового члена семьи EvereonRPG! - ${member.displayName}\n Остерегайся злого Denrosa`);
 	}
 });
 
@@ -35,7 +35,7 @@ robot.channels.get('437632335307866122').send(`Приветствуем ново
 robot.on("guildMemberRemove", member => {
     console.log(`${member.displayName} покинул ${member.guild.name}.`)
 if(member.guild.id === "437629164770820097"){
-robot.channels.get('437629164770820099').send(`${member.displayName} ушел играть с рукой Славика\n Пожелайте ему удачи`);
+robot.channels.get('437629164770820099').send(`${member.displayName} ушел играть в одиночество\n Пожелайте ему удачи`);
 	}
 });
 
@@ -114,7 +114,7 @@ robot.on('message', message => {
 
 robot.on('message', message => {
     if(message.content === (p + 'test')) {
-	var messagelol = 'Славик дурак, а ты что думал?'
+	var messagelol = 'Я работаю?'
 	    message.channel.send(messagelol)
 	     console.log(`${message.author.displayName} чекнул бота на роботоспособность`)
     }
