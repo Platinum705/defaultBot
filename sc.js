@@ -139,10 +139,8 @@ message.channel.send(randomNumber)
 
 robot.on('message', message => {
    
-    if(message.content.startsWith(p + 'trol')) {
-            message.delete()
-if(!message.member.roles.some(r=>["Основатель"].includes(r.name)) )
-				if(message.author.id !== '405258156063850497')
+    if (message.content === '!memes') {
+	    
         const buffer = fs.readFileSync('./Slaviku.txt');
 
         
