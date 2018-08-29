@@ -158,10 +158,10 @@ robot.on('message', message => {
        
         member.kick('Optional reason that will display in the audit logs').then(() => {
           
-          message.reply(`Successfully kicked ${user.tag}`);
+          message.reply(`Отправлен нахуй успешно ${user.tag}`);
         }).catch(err => {
          
-          message.reply('I was unable to kick the member');
+          message.reply('Я не могу послать того кто сидит на бутылке');
          
           console.error(err);
         });
