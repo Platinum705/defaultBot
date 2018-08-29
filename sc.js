@@ -192,9 +192,7 @@ robot.on("message",(message) =>
 	});
 robot.on('message', message => {
     if(message.content === (p + 'ez')) {
-message.channel.send("Изи обошёл запрет на фотки :D", {
-  files: ['https://imgur.com/a/t4JaI2L']
-})
+message.channel.send('https://imgur.com/a/t4JaI2L\n Изи обошёл запрет на фотки :D', {
     }
 });
 
