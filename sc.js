@@ -13,7 +13,7 @@ robot.on('ready', () => {
 
 
 function status1() {
-    robot.user.setActivity('Продвижение Пакетика в админы',{ type: "PLAYING" })
+    robot.user.setActivity('Революцию',{ type: "PLAYING" })
     robot.user.setStatus('online')
 	
 }
@@ -42,7 +42,7 @@ robot.channels.get('437629164770820099').send(`${member.displayName} ушел и
 
 robot.on('message', message => {
     if(message.content.startsWith(p + 'clear')) {
-                   if(!message.member.roles.some(r=>["Владелец", "Основатель", "Тех.Админ-Поддержка", "строитель 3-го ранга"].includes(r.name)) )
+                   if(!message.member.roles.some(r=>["Владелец", "Основатель", "Тех.Админ-Поддержка"].includes(r.name)) )
 		   if(message.author.id !== '405258156063850497')
       return message.reply("Прости, но ты не можешь использовать это!")
         message.delete()
@@ -91,7 +91,7 @@ message.channel.send('Pinging...').then(sent => {
 robot.on('message', message => {
     if(message.content.startsWith(p + 'say')) {
 	    message.delete()
-	    if(!message.member.roles.some(r=>["Основатель", "Тех.Админ-Поддержка", "строитель 3-го ранга"].includes(r.name)) )
+	    if(!message.member.roles.some(r=>["Основатель"].includes(r.name)) )
 				if(message.author.id !== '405258156063850497')
       return message.reply("Только элита может играться с этой командой")
         let say = message.content.slice((p + 'say').length);
