@@ -137,17 +137,43 @@ message.channel.send(randomNumber)
 
 }});
 
-robot.on('message', message => {
-   
-    if (message.content === '!memes') {
-	    
-        const buffer = fs.readFileSync('./Slaviku.txt');
+robot.on('ready', () => {
+  console.log('I am ready!');
+});
 
-        
-        const attachment = new Attachment(buffer, 'Slaviku.txt');
-        
-        message.channel.send(`${message.author}, Славик прочти!`, attachment);
+robot.on('message', message => {
+  
+  if (!message.guild) return;
+
+  
+  if(message.content.startsWith(p + 'kick')) {
+   
+    const user = message.mentions.users.first();
+   
+    if (user) {
+      
+      const member = message.guild.member(user);
+      
+      if (member) {
+       
+        member.kick('Optional reason that will display in the audit logs').then(() => {
+          
+          message.reply(`Successfully kicked ${user.tag}`);
+        }).catch(err => {
+         
+          message.reply('I was unable to kick the member');
+         
+          console.error(err);
+        });
+      } else {
+       
+        message.reply('That user isn\'t in this guild!');
+      }
+   
+    } else {
+      message.reply('You didn\'t mention the user to kick!');
     }
+  }
 });
 
 robot.login(process.env.BOT_TOKEN);
