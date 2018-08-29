@@ -181,7 +181,7 @@ robot.on("message",(message) =>
 	{  
 
 	    if(message.content.startsWith(p + 'inv')) {
-
+                 message.delete()
 	    {
 	        message.channel.createInvite({temporary : true})
 
