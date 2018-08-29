@@ -190,10 +190,11 @@ robot.on("message",(message) =>
 	    }
 }
 	});
-robot.on('message', message => {
+
+	   robot.on('message', message => {
     if(message.content === (p + 'ez')) {
-message.channel.send('https://imgur.com/a/t4JaI2L\n Изи обошёл запрет на фотки :D', {
+	    message.channel.send('https://imgur.com/a/t4JaI2L\n Изи обошёл запрет на фотки :D')
+	  
     }
 });
-
 robot.login(process.env.BOT_TOKEN);
