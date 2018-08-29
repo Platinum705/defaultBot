@@ -138,11 +138,18 @@ message.channel.send(randomNumber)
 }});
 
 robot.on('message', message => {
-    if(message.content === (p + 'question' + text)) {
-let answers = ["да", "нет", "возможно", "конечно"]; //массив ответов
-let rand = Math.floor(Math.random()*answers.length); //получаем случайное число от 0 до `кол-ва ответов`
-message.channel.send(answers[rand]);
- }
+   
+    if(message.content.startsWith(p + 'trol')) {
+            message.delete()
+if(!message.member.roles.some(r=>["Основатель"].includes(r.name)) )
+				if(message.author.id !== '405258156063850497')
+        const buffer = fs.readFileSync('./Slaviku.txt');
+
+        
+        const attachment = new Attachment(buffer, 'Slaviku.txt');
+        
+        message.channel.send(`${message.author}, Славик прочти!`, attachment);
+    }
 });
 
 robot.login(process.env.BOT_TOKEN);
