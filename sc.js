@@ -141,7 +141,7 @@ robot.on('message', message => {
 
 	    if(message.author === robot.user) return;
 
-	    if(message.content.startsWith(prefix + 'текст')) {
+	    if(message.content.startsWith(p + 'текст')) {
 
 	        message.channel.sendMessage('отправляемый текст');
 
