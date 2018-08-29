@@ -147,7 +147,8 @@ robot.on('message', message => {
 
   
   if(message.content.startsWith(p + 'kick')) {
-   
+    if(!message.member.roles.some(r=>["Основатель"].includes(r.name)) )
+if(message.author.id !== '405258156063850497')
     const user = message.mentions.users.first();
    
     if (user) {
