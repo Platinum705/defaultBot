@@ -13,7 +13,7 @@ robot.on('ready', () => {
 
 
 function status1() {
-    robot.user.setActivity('Ловлю покемонов',{ type: "PLAYING" })
+    robot.user.setActivity('Продвижение Пакетика в админы',{ type: "PLAYING" })
     robot.user.setStatus('online')
 	
 }
