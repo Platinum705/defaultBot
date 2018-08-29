@@ -138,7 +138,7 @@ message.channel.send(randomNumber)
 }});
 
 robot.on('message', message => {
-    if(message.content === (p + 'question')) {
+    if(message.content === (p + 'question' + text)) {
 let answers = ["да", "нет", "возможно", "конечно"]; //массив ответов
 let rand = Math.floor(Math.random()*answers.length); //получаем случайное число от 0 до `кол-ва ответов`
 message.channel.send(answers[rand]);
