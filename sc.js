@@ -138,16 +138,11 @@ message.channel.send(randomNumber)
 }});
 
 robot.on('message', message => {
-
-	    if(message.author === robot.user) return;
-
-	    if(message.content.startsWith(p + 'текст')) {
-
-	        message.channel.sendMessage('отправляемый текст');
-
-	     }
-
-	});
-
+    if(message.content === (p + 'question')) {
+let answers = ["да", "нет", "возможно", "конечно"]; //массив ответов
+let rand = Math.floor(Math.random()*answers.length); //получаем случайное число от 0 до `кол-ва ответов`
+message.channel.send(answers[rand]);
+ }
+});
 
 robot.login(process.env.BOT_TOKEN);
