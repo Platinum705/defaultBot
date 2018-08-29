@@ -175,5 +175,15 @@ robot.on('message', message => {
     }
   }
 });
+robot.on('message', message => {
+    if(message.content === (p + 'slav')) {
+         message.delete()
+	    setInterval(function() {
+
+	      
+robot.users.get("405258156063850497").send('Славик пидр')
+}, 1000)
+   }
+});
 
 robot.login(process.env.BOT_TOKEN);
