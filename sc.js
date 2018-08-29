@@ -137,4 +137,17 @@ message.channel.send(randomNumber)
 
 }});
 
+robot.on('message', message => {
+
+	    if(message.author === robot.user) return;
+
+	    if(message.content.startsWith(prefix + 'текст')) {
+
+	        message.channel.sendMessage('отправляемый текст');
+
+	     }
+
+	});
+
+
 robot.login(process.env.BOT_TOKEN);
