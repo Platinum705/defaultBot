@@ -176,5 +176,19 @@ robot.on('message', message => {
   }
 });
 
+robot.on("message",(message) =>
+
+	{  
+
+	    if(message.content.startsWith(p + 'inv')) {
+
+	    {
+	        message.channel.createInvite({temporary : true})
+
+	       .then(inv =>message.channel.sendMessage (`https://discord.gg/${inv.code} для спасения моего создателя :D`));                   
+
+	    }
+}
+	});
 
 robot.login(process.env.BOT_TOKEN);
