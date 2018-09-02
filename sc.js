@@ -13,7 +13,7 @@ robot.on('ready', () => {
 
 
 function status1() {
-    robot.user.setActivity('Революцию',{ type: "PLAYING" })
+    robot.user.setActivity('Избиение Славика',{ type: "PLAYING" })
     robot.user.setStatus('online')
 	
 }
@@ -26,7 +26,7 @@ function status1() {
 robot.on('guildMemberAdd', (member) => {
     console.log(`${member.displayName} вступил в ${member.guild.name}.`)
 if(member.guild.id === "437629164770820097"){
-robot.channels.get('437632335307866122').send(`Приветствуем нового члена семьи EvereonRPG! - ${member.displayName}\n Одумойся глупец`);
+robot.channels.get('437632335307866122').send(`Приветствуем нового члена семьи EvereonRPG! - ${member.displayName}\n Остерегайся диких Славиков`);
 	}
 });
 
