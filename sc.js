@@ -35,7 +35,7 @@ robot.channels.get('437632335307866122').send(`Приветствуем ново
 robot.on("guildMemberRemove", member => {
     console.log(`${member.displayName} покинул ${member.guild.name}.`)
 if(member.guild.id === "437629164770820097"){
-robot.channels.get('437629164770820099').send(`${member.displayName} ушел играть в одиночество\n Пожелайте ему удачи`);
+robot.channels.get('437632335307866122').send(`${member.displayName} ушел насиловать Славика\n Пожелайте ему удачи`);
 	}
 });
 
