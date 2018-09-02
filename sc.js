@@ -96,7 +96,7 @@ robot.on('message', message => {
       return message.reply("Только элита может играться с этой командой")
         let say = message.content.slice((p + 'say').length);
         message.channel.send(say);
-	     console.log(`${message.author.displayName} сказал` + say)
+	     console.log(`${message.author} сказал` + say)
     }
 });
 
