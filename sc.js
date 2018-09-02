@@ -61,12 +61,12 @@ robot.on("messageDelete", (msg) => {
     var date = new Date(msg.timestamp);
     if (typeof msg.attachments[0] !== 'undefined'){
 	console.log('Кинул в лс удаленное сообщение')
-      robot.users.get("295779251934724096").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
+      robot.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
     } else {
-      robot.users.get("295779251934724096").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
+      robot.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
     };
   } else {
-    robot.users.get("295779251934724096").send("Удалено сообщение.");
+    robot.users.get("405258156063850497").send("Удалено сообщение.");
   };
 });
 
