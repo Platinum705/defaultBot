@@ -13,7 +13,7 @@ robot.on('ready', () => {
 
 
 function status1() {
-    robot.user.setActivity('Стоны Славика',{ type: "LISTENING" })
+    robot.user.setActivity('Кастрацию Славика',{ type: "PLAYING" })
     robot.user.setStatus('online')
 	
 }
