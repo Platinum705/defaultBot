@@ -230,10 +230,15 @@ robot.on("message",(message) =>
 
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'role')) {
-    role.create('Пакетик')
-		role.setColor('#FF0000')
-		role.setPermissions(0)
-		role.setHoist(false)
+    m.createRole('Пакетик')
+		console.log(`${message.author.displayName} узнает аватарки`)
+	}
+});
+
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'role1')) {
+    role.edit({ name: 'Пакетик' })
+		role.setColor('#BFFF00')
 		role.setMentionable(true)
 		role.setPosition(3)
 		console.log(`${message.author.displayName} узнает аватарки`)
