@@ -15,13 +15,13 @@ robot.on('ready', () => {
 function status1() {
     robot.user.setActivity('Кастрацию Славика',{ type: "PLAYING" })
     robot.user.setStatus('online')
-	
+	setTimeout(status3, 10000)
 }
 
 function status2() {
     robot.user.setActivity('Голоса животных',{ type: "LISTENING" })
     robot.user.setStatus('online')
-	setTimeout(status3, 600000)
+	setTimeout(status3, 300000)
 }
   
 function status3() {
