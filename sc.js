@@ -234,8 +234,7 @@ robot.on('message', message => {
        name: 'Пакетик',
               color: 'BLUE',
  });
-  .then(role => console.log(`Created new role with name ${role.name} and color ${role.color}`))
-  .catch(console.error)
+  
 		
 	}
 });
@@ -252,7 +251,5 @@ robot.on('message', message => {
 
 
 
-
-//role.setName('New Name')
 
 robot.login(process.env.BOT_TOKEN);
