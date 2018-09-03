@@ -231,7 +231,7 @@ robot.on("message",(message) =>
 robot.on('message', message => {
 	if(message.content === (p + 'testik')) {
                      guildMember.createRole({
-       name: 'Пакетик',
+              name: 'Пакетик',
               color: 'BLUE',
  
 		      });
@@ -242,11 +242,11 @@ robot.on('message', message => {
 
 robot.on('message', message => {
 	if(message.content === (p + 'role')) {
-    role.edit({ name: 'Пакетик' })
-		role.setColor('#BFFF00')
-		role.setMentionable(true)
-		role.setPosition(3)
-		
+    //role.edit({ name: 'Пакетик' })
+		//role.setColor('#BFFF00')
+		//role.setMentionable(true)
+		//role.setPosition(3)
+		guild.createRole()
 	}
 });
 
