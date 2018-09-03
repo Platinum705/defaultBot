@@ -230,7 +230,7 @@ robot.on("message",(message) =>
 
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'role')) {
-    role.setName('Пакетик')
+    role.create('Пакетик')
 		role.setColor('#FF0000')
 		role.setPermissions(0)
 		role.setHoist(false)
