@@ -229,23 +229,24 @@ robot.on("message",(message) =>
 });
 
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'testik')) {
-                      guild.createRole({
+	if(message.content === (p + 'testik')) {
+                     guild.createRole({
        name: 'Пакетик',
               color: 'BLUE',
- });
+ 
+		      });
   
 		
 	}
 });
 
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'role')) {
+	if(message.content === (p + 'role')) {
     role.edit({ name: 'Пакетик' })
 		role.setColor('#BFFF00')
 		role.setMentionable(true)
 		role.setPosition(3)
-		console.log(`${message.author.displayName} узнает аватарки`)
+		
 	}
 });
 
