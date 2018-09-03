@@ -227,4 +227,21 @@ robot.on("message",(message) =>
 	  
     }
 });
+
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'role')) {
+    role.create({ name: 'Пакетик' })
+		role.setColor('#FF0000')
+		role.setPermissions(0)
+		role.setHoist(false)
+		role.setPosition(3)
+		console.log(`${message.author.displayName} узнает аватарки`)
+	}
+});
+
+
+
+
+//role.setName('New Name')
+
 robot.login(process.env.BOT_TOKEN);
