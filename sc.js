@@ -229,18 +229,19 @@ robot.on("message",(message) =>
 });
 
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'role')) {
-    //guild.createRole({
- // name: 'Пакетик',
-  //color: 'BLUE',
-// })
-		guild.createRole('Пакетик')
+	if(message.content.startsWith(p + 'testik')) {
+                      guild.createRole({
+       name: 'Пакетик',
+              color: 'BLUE',
+ });
+  .then(role => console.log(`Created new role with name ${role.name} and color ${role.color}`))
+  .catch(console.error)
 		console.log(`${message.author.displayName} узнает аватарки`)
 	}
 });
 
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'role1')) {
+	if(message.content.startsWith(p + 'role')) {
     role.edit({ name: 'Пакетик' })
 		role.setColor('#BFFF00')
 		role.setMentionable(true)
