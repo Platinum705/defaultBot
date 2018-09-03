@@ -15,37 +15,37 @@ robot.on('ready', () => {
 function status1() {
     robot.user.setActivity('Кастрацию Славика',{ type: "PLAYING" })
     robot.user.setStatus('online')
-	setTimeout(status2, 10000)
+	setTimeout(status2, 1000000)
 }
 
 function status2() {
     robot.user.setActivity('Голоса животных',{ type: "LISTENING" })
     robot.user.setStatus('online')
-	setTimeout(status3, 300000)
+	setTimeout(status3, 30000000)
 }
   
 function status3() {
     robot.user.setActivity('Жадную пещеру',{ type: "PLAYING" })
     robot.user.setStatus('online')
-	setTimeout(status4, 300000)
+	setTimeout(status4, 30000000)
 }
 
 function status4() {
     robot.user.setActivity('Кастрацию Славика',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
-	setTimeout(status5, 300000)
+	setTimeout(status5, 30000000)
 }
 
 function status5() {
     robot.user.setActivity('bot prefix *',{ type: "PLAYING" })
     robot.user.setStatus('online')
-	setTimeout(status6, 300000)
+	setTimeout(status6, 30000000)
 }
 
 function status6() {
     robot.user.setActivity('Кастрацию Славика',{ type: "PLAYING" })
      robot.user.setStatus('online')
-        setTimeout(status1, 300000)
+        setTimeout(status1, 30000000)
 }
 
     robot.on('guildMemberAdd', (member) => {
