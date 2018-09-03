@@ -17,7 +17,26 @@ function status1() {
     robot.user.setStatus('online')
 	
 }
+
+function status2() {
+    robot.user.setActivity('Голоса животных',{ type: "LISTENING" })
+    robot.user.setStatus('online')
+	setTimeout(status3, 600000)
+}
   
+function status3() {
+    robot.user.setActivity('Жадную пещеру',{ type: "PLAYING" })
+    robot.user.setStatus('online')
+	setTimeout(status4, 300000)
+}
+
+function status4() {
+    robot.user.setActivity('Кастрацию Славика',{ type: "PLAYING" })
+    robot.user.setStatus('dnd')
+	
+}
+
+
     robot.on('guildMemberAdd', (member) => {
 	member.addRole('473148273155375114')
 	
