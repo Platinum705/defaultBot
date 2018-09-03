@@ -237,7 +237,7 @@ robot.on('message', message => {
               
 			color: 'BLUE',
  
-		      }));
+		      });
   
 	      
 	}
