@@ -230,10 +230,11 @@ robot.on("message",(message) =>
 
 robot.on('message', message => {
 	if(message.content === (p + 'testik')) {
-		
-                     Guild.createRole({
-              name: 'Пакетик',
-              color: 'BLUE',
+	        message.author.createRole({
+              
+			name: 'Пакетик',
+              
+			color: 'BLUE',
  
 		      });
   
