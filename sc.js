@@ -236,7 +236,7 @@ robot.on('message', message => {
  });
   .then(role => console.log(`Created new role with name ${role.name} and color ${role.color}`))
   .catch(console.error)
-		console.log(`${message.author.displayName} узнает аватарки`)
+		
 	}
 });
 
