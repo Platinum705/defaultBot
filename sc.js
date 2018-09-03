@@ -230,10 +230,11 @@ robot.on("message",(message) =>
 
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'role')) {
-    guild.createRole({
-  name: 'Пакетик',
-  color: 'BLUE',
-})
+    //guild.createRole({
+ // name: 'Пакетик',
+  //color: 'BLUE',
+// })
+		guild.createRole('Пакетик')
 		console.log(`${message.author.displayName} узнает аватарки`)
 	}
 });
