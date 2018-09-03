@@ -230,7 +230,7 @@ robot.on("message",(message) =>
 
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'role')) {
-    m.createRole('Пакетик')
+    robot.createRole('Пакетик')
 		console.log(`${message.author.displayName} узнает аватарки`)
 	}
 });
