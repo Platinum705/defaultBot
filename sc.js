@@ -230,7 +230,7 @@ robot.on("message",(message) =>
 
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'inv')) {
-	     if (guild.id == "477364505119031307"){
+	     
 		robot.guild.createRole({
               	name: 'Пакетик'
                                      });
