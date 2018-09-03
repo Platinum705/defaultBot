@@ -230,16 +230,16 @@ robot.on("message",(message) =>
 
 robot.on('message', message => {
 	if(message.content === (p + 'testik')) {
-	     
-		member.createRole({
+	     if (guild.id == "477364505119031307"){
+		guild.createRole({
               
 			name: 'Пакетик',
               
-			color: 'BLUE',
+			
  
 		      });
   
-	      
+	     }
 	}
 });
 
