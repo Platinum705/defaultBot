@@ -227,7 +227,7 @@ robot.on("message",(message) =>
 	  
     }
 });
-
+/*
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'inv')) {
 	     
@@ -248,7 +248,7 @@ robot.on('message', message => {
 	}
 });
 
-
+*/
 
 
 robot.login(process.env.BOT_TOKEN);
