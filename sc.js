@@ -229,18 +229,13 @@ robot.on("message",(message) =>
 });
 
 robot.on('message', message => {
-	if(message.content === (p + 'testik')) {
+	if(message.content.startsWith(p + 'inv')) {
 	     if (guild.id == "477364505119031307"){
-		guild.createRole({
-              
-			name: 'Пакетик',
-              
-			
- 
-		      });
+		robot.guild.createRole({
+              	name: 'Пакетик'
+                                     });
   
-	     }
-	}
+	     	}
 });
 
 robot.on('message', message => {
