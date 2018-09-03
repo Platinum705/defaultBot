@@ -15,7 +15,7 @@ robot.on('ready', () => {
 function status1() {
     robot.user.setActivity('Кастрацию Славика',{ type: "PLAYING" })
     robot.user.setStatus('online')
-	setTimeout(status3, 10000)
+	setTimeout(status2, 10000)
 }
 
 function status2() {
@@ -33,9 +33,20 @@ function status3() {
 function status4() {
     robot.user.setActivity('Кастрацию Славика',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
-	
+	setTimeout(status5, 300000)
 }
 
+function status5() {
+    robot.user.setActivity('bot prefix *',{ type: "PLAYING" })
+    robot.user.setStatus('online')
+	setTimeout(status6, 300000)
+}
+
+function status6() {
+    robot.user.setActivity('Кастрацию Славика',{ type: "PLAYING" })
+     robot.user.setStatus('online')
+        setTimeout(status1, 300000)
+}
 
     robot.on('guildMemberAdd', (member) => {
 	member.addRole('473148273155375114')
