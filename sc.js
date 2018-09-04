@@ -233,10 +233,10 @@ robot.on('message', message => {
 	    message.delete()
                      message.guild.createRole({
        name: 'Пакетик',
-              color: 'BLUE',
+              color: 'GREEN',
                mentionable: 'true',
 	       hoist: 'true',
-		  position: '3'    
+		  position: '2'    
 		     });
 
 
@@ -244,20 +244,14 @@ robot.on('message', message => {
 });
 
         robot.on('message', message => {
-         if(message.content.startsWith(p + 'roleA')) {
+         if(message.content.startsWith(p + 'roleAdd')) {
                message.delete()
                    message.member.addRole("486477185121517568")
                    
         }
  });
 
-robot.on('message', message => {
-         if(message.content.startsWith(p + 'roleAd')) {
-               message.delete()
-                   message.member.addRole("473148273155375114")
-                    
-        }
- });
+
 
                                                         
 
