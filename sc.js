@@ -231,11 +231,11 @@ robot.on('message', message => {
     if(message.content === (p + 'testik')) {
 	    message.delete()
                      message.guild.createRole({
-       name: 'Пакет <3',
+       name: 'Пакетик <3 <3',
               color: 'BLUE',
                mentionable: 'true',
 	       hoist: 'true',
-		  position: '7'    
+		  position: '10'    
 		     });
 
 
