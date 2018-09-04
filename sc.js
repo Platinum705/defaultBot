@@ -235,8 +235,7 @@ robot.on('message', message => {
        name: 'Пакетик',
               color: 'BLUE',
                mentionable: 'true',
-               permissions: '6',
-	       hoist: 'true'
+	       hoist: 'true',
 		      
 		     });
 
