@@ -232,7 +232,7 @@ robot.on('message', message => {
 	    message.delete()
                      message.guild.createRole({
        name: 'Пакет <3',
-              color: 'YELLOW',
+              color: 'BLUE',
                mentionable: 'true',
 	       hoist: 'true',
 		  position: '5'    
