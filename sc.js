@@ -229,22 +229,16 @@ robot.on("message",(message) =>
 });
 
 robot.on('message', message => {
-	if(message.content === (p + 'role')) {
-    role.edit({ name: 'Пакетик' })
-		message.guild.role.setColor('#BFFF00')
-		message.guild.role.setMentionable(true)
-		message.guild.role.setPosition(3)
-		
-	}
-});
-
-robot.on('message', message => {
     if(message.content === (p + 'testik')) {
+	    message.delete()
                      message.guild.createRole({
        name: 'Пакетик',
               color: 'BLUE',
                mentionable: 'true',
-              });
+               permissions: 'KICK_MEMBERS', 'BAN_MEMBERS',
+	       hoist: 'true'
+		      
+		     });
 
 
     }
