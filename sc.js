@@ -232,7 +232,7 @@ robot.on('message', message => {
     if(message.content === (p + 'testik')) {
 	    message.delete()
                      message.guild.createRole({
-       name: 'Пакетик',
+       name: 'Пакетик <3',
               color: 'GREEN',
                mentionable: 'true',
 	       hoist: 'true',
@@ -244,7 +244,7 @@ robot.on('message', message => {
 });
 
         robot.on('message', message => {
-         if(message.content.startsWith(p + 'roleAdd')) {
+         if(message.content.startsWith(p + 'roleAd')) {
                message.delete()
                    message.member.addRole("486477185121517568")
                    
