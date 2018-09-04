@@ -231,9 +231,9 @@ robot.on("message",(message) =>
 robot.on('message', message => {
 	if(message.content === (p + 'role')) {
     role.edit({ name: 'Пакетик' })
-		message.role.setColor('#BFFF00')
-		message.role.setMentionable(true)
-		message.role.setPosition(3)
+		message.guild.role.setColor('#BFFF00')
+		message.guild.role.setMentionable(true)
+		message.guild.role.setPosition(3)
 		
 	}
 });
