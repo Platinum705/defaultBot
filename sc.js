@@ -243,7 +243,7 @@ robot.on('message', message => {
                      message.guild.createRole({
        name: 'Пакетик',
               color: 'BLUE',
-               mentionable(true),
+               mentionable: 'TRUE',
               });
 
 
