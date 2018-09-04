@@ -245,7 +245,7 @@ robot.on('message', message => {
         robot.on('message', message => {
          if(message.content.startsWith(p + 'roleAd')) {
                message.delete()
-                   message.member.addRole("486488843143479306")
+                   message.member.addRole("486490358172221440")
                    
         }
  });
