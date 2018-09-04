@@ -227,16 +227,6 @@ robot.on("message",(message) =>
 	  
     }
 });
-/*
-robot.on('message', message => {
-	if(message.content.startsWith(p + 'inv')) {
-	     
-		robot.createRole({
-              	name: 'Пакетик'
-                                     });
-  
-	     	}
-});
 
 robot.on('message', message => {
 	if(message.content === (p + 'role')) {
@@ -248,7 +238,18 @@ robot.on('message', message => {
 	}
 });
 
-*/
+robot.on('message', message => {
+    if(message.content === (p + 'testik')) {
+                     message.guild.createRole({
+       name: 'Пакетик',
+              color: 'BLUE',
+ 
+              });
+
+
+    }
+});
+
 
 
 robot.login(process.env.BOT_TOKEN);
