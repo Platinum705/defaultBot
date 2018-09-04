@@ -246,19 +246,12 @@ robot.on('message', message => {
                                                  robot.on('message', message => {
                                                         if(message.content.startsWith(p + 'roleA')) {
                                                             message.delete()
-                                                        message.mentions.members.first().addRole("486477185121517568")
-                                                        message.mentions.members.first().removeRole("473148273155375114")
+                                                        message.mentions.members.first().guild.addRole("486477185121517568")
+                                                        message.mentions.members.first().guild.removeRole("473148273155375114")
                                                         }
                                                         });
 
 
-                                                        robot.on('message', message => {
-                                    
-                                                            if(message.content.startsWith(p + 'roleR')) {
-                                                                message.delete()
-                                                            message.mentions.members.first().removeRole("486477185121517568")
-                                                           
-                                                            }
-                                                            });
+                                                        
 
 robot.login(process.env.BOT_TOKEN);
