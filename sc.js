@@ -144,8 +144,7 @@ robot.on('message', message => {
 
 robot.on('message', message => {
     if(message.content === (p + 'test')) {
-	var messagelol = 'Я работаю?'
-	    message.channel.send(messagelol)
+	    message.role.delete('486484215026679808')
 	     console.log(`${message.author.displayName} чекнул бота на роботоспособность`)
     }
 });
