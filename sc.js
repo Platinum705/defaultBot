@@ -251,6 +251,13 @@ robot.on('message', message => {
         }
  });
 
+robot.on('message', message => {
+         if(message.content.startsWith(p + 'roleAd')) {
+               message.delete()
+                   message.member.addRole("486477185121517568")
+                    
+        }
+ });
 
                                                         
 
