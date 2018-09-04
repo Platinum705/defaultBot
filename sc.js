@@ -144,7 +144,7 @@ robot.on('message', message => {
 
 robot.on('message', message => {
     if(message.content === (p + 'test')) {
-	    message.role.delete('486484215026679808')
+	    message.guild.deleteRole('486484215026679808')
 	     console.log(`${message.author.displayName} чекнул бота на роботоспособность`)
     }
 });
