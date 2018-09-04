@@ -243,13 +243,13 @@ robot.on('message', message => {
     }
 });
 
-                                                 robot.on('message', message => {
-                                                        if(message.content.startsWith(p + 'roleA')) {
-                                                            message.delete()
-                                                        message.member.addRole("486477185121517568")
-                                                        message.member.removeRole("473148273155375114")
-                                                        }
-                                                        });
+        robot.on('message', message => {
+         if(message.content.startsWith(p + 'roleA')) {
+               message.delete()
+                   message.member.addRole("486477185121517568")
+                    message.member.removeRole("473148273155375114")
+        }
+ });
 
 
                                                         
