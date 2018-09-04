@@ -236,7 +236,7 @@ robot.on('message', message => {
               color: 'BLUE',
                mentionable: 'true',
 	       hoist: 'true',
-		  position: '0'    
+		  position: '3'    
 		     });
 
 
