@@ -245,7 +245,9 @@ robot.on('message', message => {
         robot.on('message', message => {
          if(message.content.startsWith(p + 'roleAd')) {
                message.delete()
-                   message.member.addRole("486490358172221440")
+				if(message.author.id !== '295779251934724096')
+      return message.reply("Только элита может играться с этой командой")
+                   message.member.addRole("437630708794654720")
                    
         }
  });
