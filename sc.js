@@ -13,7 +13,7 @@ robot.on('ready', () => {
 
 
 function status1() {
-    robot.user.setActivity('Кастрацию Славика',{ type: "PLAYING" })
+    robot.user.setActivity('Свой гавнокод',{ type: "WATCHING" })
     robot.user.setStatus('online')
 	setTimeout(status2, 1000000)
 }
@@ -31,7 +31,7 @@ function status3() {
 }
 
 function status4() {
-    robot.user.setActivity('Кастрацию Славика',{ type: "PLAYING" })
+    robot.user.setActivity('Кастрацию собак',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
 	setTimeout(status5, 30000000)
 }
@@ -245,8 +245,8 @@ robot.on('message', message => {
         robot.on('message', message => {
          if(message.content.startsWith(p + 'roleAd')) {
                message.delete()
-				if(message.author.id !== '295779251934724096')
-      return message.reply("Только элита может играться с этой командой")
+				if(message.author.id !== '405258156063850497')
+      return message.reply("Только для разработчика")
                    message.member.addRole("437630708794654720")
                    
         }
