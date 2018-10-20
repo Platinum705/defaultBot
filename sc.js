@@ -25,7 +25,7 @@ function status2() {
 }
   
 function status3() {
-    robot.user.setActivity('Жадную пещеру',{ type: "PLAYING" })
+   robot.user.setActivity('Дискриминацию Славиков',{ type: "PLAYING" })
     robot.user.setStatus('online')
 	setTimeout(status4, 30000000)
 }
