@@ -247,7 +247,7 @@ robot.on('message', message => {
                message.delete()
 				if(message.author.id !== '405258156063850497')
       return message.reply("Только для разработчика")
-                   message.member.addRole("437630708794654720")
+                   message.member.addRole("473199188977385483")
                    
         }
  });
