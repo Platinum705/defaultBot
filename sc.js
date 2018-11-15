@@ -253,6 +253,16 @@ robot.on('message', message => {
  });
 
 
+  robot.on('message', message => {
+         if(message.content.startsWith(p + 'roleRem')) {
+               message.delete()
+				if(message.author.id !== '405258156063850497')
+      return message.reply("Только для разработчика")
+                   message.member.removeRole("437630708794654720")
+                   
+        }
+ });
+
 
                                                         
 
