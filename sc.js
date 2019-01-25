@@ -176,7 +176,9 @@ robot.on('message', message => {
 
   
   if(message.content.startsWith(p + 'kick')) {
-	  
+	  message.delete()
+	  if(message.author.id !== '331465338669629450')
+      return message.reply("Соси бибу")
     const user = message.mentions.users.first();
    
     if (user) {
