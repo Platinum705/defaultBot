@@ -128,12 +128,17 @@ robot.on('message', message => {
 
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
+		
 		const embed = new Discord.RichEmbed()
 		.setTitle('Аватар пользователя:')
             .setColor('RANDOM')
 		 .setImage(message.mentions.users.first().avatarURL)
 		 message.channel.send({embed})
+		
+		
+		
 		console.log(`${message.author.displayName} узнает аватарки`)
+		
 	}
 });
 
