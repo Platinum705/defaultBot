@@ -25,7 +25,7 @@ function status2() {
 }
   
 function status3() {
-   robot.user.setActivity('Дискриминацию Славиков',{ type: "PLAYING" })
+   robot.user.setActivity('Дискриминацию Егора',{ type: "PLAYING" })
     robot.user.setStatus('online')
 	setTimeout(status4, 30000000)
 }
@@ -39,14 +39,10 @@ function status4() {
 function status5() {
     robot.user.setActivity('bot prefix *',{ type: "PLAYING" })
     robot.user.setStatus('online')
-	setTimeout(status6, 30000000)
+	
 }
 
-function status6() {
-    robot.user.setActivity('Кастрацию Славика',{ type: "PLAYING" })
-     robot.user.setStatus('online')
-        setTimeout(status1, 30000000)
-}
+
 
     robot.on('guildMemberAdd', (member) => {
 	member.addRole('473148273155375114')
@@ -56,7 +52,7 @@ function status6() {
 robot.on('guildMemberAdd', (member) => {
     console.log(`${member.displayName} вступил в ${member.guild.name}.`)
 if(member.guild.id === "437629164770820097"){
-robot.channels.get('437632335307866122').send(`Приветствуем нового члена семьи EvereonRPG! - ${member.displayName}\n Остерегайся диких Славиков`);
+robot.channels.get('437632335307866122').send(`Приветствуем нового члена семьи - ${member.displayName}\n Остерегайся диких Славиков`);
 	}
 });
 
@@ -65,14 +61,14 @@ robot.channels.get('437632335307866122').send(`Приветствуем ново
 robot.on("guildMemberRemove", member => {
     console.log(`${member.displayName} покинул ${member.guild.name}.`)
 if(member.guild.id === "437629164770820097"){
-robot.channels.get('437632335307866122').send(`${member.displayName} ушел насиловать Славика\n Пожелайте ему удачи`);
+robot.channels.get('437632335307866122').send(`${member.displayName} ушел насиловать ногу Егора\n Пожелайте ему удачи`);
 	}
 });
 
 
 robot.on('message', message => {
     if(message.content.startsWith(p + 'clear')) {
-                   if(!message.member.roles.some(r=>["Владелец", "Основатель", "Тех.Админ-Поддержка"].includes(r.name)) )
+                   if(!message.member.roles.some(r=>["Владелец", "лучший пидор", "Тех.Админ-Поддержка"].includes(r.name)) )
 		   if(message.author.id !== '405258156063850497')
       return message.reply("Прости, но ты не можешь использовать это!")
         message.delete()
