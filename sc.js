@@ -117,7 +117,7 @@ message.channel.send('Pinging...').then(sent => {
 robot.on('message', message => {
     if(message.content.startsWith(p + 'say')) {
 	    message.delete()
-	    if(!message.member.roles.some(r=>["Пакетик <3"].includes(r.name)) )
+	    if(!message.member.roles.some(r=>["Чаёк"].includes(r.name)) )
 				if(message.author.id !== '331465338669629450')
       return message.reply("Только элита может играться с этой командой")
         let say = message.content.slice((p + 'say').length);
