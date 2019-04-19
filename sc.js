@@ -15,7 +15,7 @@ robot.on('ready', () => {
 function status1() {
     robot.user.setActivity('За своим отцом',{ type: "WATCHING" })
     robot.user.setStatus('online')
-	
+}	
 
 
 robot.on('message', message => {
