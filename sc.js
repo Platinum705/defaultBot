@@ -13,14 +13,14 @@ robot.on('ready', () => {
 
 
 function status1() {
-    robot.user.setActivity('Свой гавнокод',{ type: "WATCHING" })
+    robot.user.setActivity('За своим отцом',{ type: "WATCHING" })
     robot.user.setStatus('online')
 	
 
 
 robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
-	message.channel.send('Ты кто такой, тебя не звали, иди нафиг )')
+	message.channel.send('В разработке')
 	    console.log(`${message.author.displayName} прописал команду help`)
         };
 });
@@ -38,7 +38,7 @@ message.channel.send('Pinging...').then(sent => {
 robot.on('message', message => {
     if(message.content.startsWith(p + 'say')) {
 	    message.delete()
-	    if(!message.member.roles.some(r=>["Чаёк"].includes(r.name)) )
+	    if(!message.member.roles.some(r=>["Создатель"].includes(r.name)) )
 				if(message.author.id !== '331465338669629450')
       return message.reply("Только элита может играться с этой командой")
         let say = message.content.slice((p + 'say').length);
@@ -100,7 +100,7 @@ robot.on('message', message => {
   if(message.content.startsWith(p + 'kick')) {
 	  message.delete()
 	  if(message.author.id !== '331465338669629450')
-      return message.reply("Соси бибу")
+      return message.reply(".")
     const user = message.mentions.users.first();
    
     if (user) {
@@ -111,10 +111,10 @@ robot.on('message', message => {
        
         member.kick('Optional reason that will display in the audit logs').then(() => {
           
-          message.reply(`Отправлен нахуй успешно ${user.tag}`);
+          message.reply(`В бан отправлен  ${user.tag}`);
         }).catch(err => {
          
-          message.reply('Я не могу послать того кто сидит на бутылке');
+          message.reply('Ошибка');
          
           console.error(err);
         });
