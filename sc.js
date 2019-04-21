@@ -191,18 +191,18 @@ robot.on('message', message => {
         }
  });
 
-robot.on("messageDeleteBulk", (msg) => {
-  if (typeof msg.content !== 'undefined'){
-    var date = new Date(msg.createdTimestamp);
-    if (typeof msg.attachments[0] !== 'undefined'){
-	console.log('Кинул в лс удаленное сообщение')
-      robot.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
-    } else {
-      robot.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
-    };
-  } else {
-    robot.users.get("405258156063850497").send("Удалено сообщение.");
-  };
-});                                         
+robot.on("messageDelete", (msg) => {	
+  if (typeof msg.content !== 'undefined'){	
+    var date = new Date(msg.timestamp);	
+    if (typeof msg.attachments[0] !== 'undefined'){	
+	console.log('Кинул в лс удаленное сообщение')	
+      robot.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);	
+    } else {	
+      robot.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);	
+    };	
+  } else {	
+    robot.users.get("405258156063850497").send("Удалено сообщение.");	
+  };	
+});                                    
 
 robot.login(process.env.BOT_TOKEN);
