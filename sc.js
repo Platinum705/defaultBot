@@ -191,8 +191,7 @@ robot.on('message', message => {
         }
  });
 
-
-               robot.on("messageDeleteBulk", (msg) => {
+robot.on("messageDeleteBulk", (msg) => {
   if (typeof msg.content !== 'undefined'){
     var date = new Date(msg.createdTimestamp);
     if (typeof msg.attachments[0] !== 'undefined'){
