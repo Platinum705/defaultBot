@@ -205,12 +205,13 @@ robot.on("messageDelete", (msg) => {
   };	
 });                                    
 
-
+/*
 robot.on('message', message => {
     if(message.content === ('<@405258156063850497>')) {
 	    message.reply("На данный момент Чаёк не в сети")
-	     console.log(`${message.author.displayName} чекнул бота на роботоспособность`)
+
+	     robot.users.get("405258156063850497").send(`Вас упомянули в `);
     }
 });
-
+*/
 robot.login(process.env.BOT_TOKEN);
