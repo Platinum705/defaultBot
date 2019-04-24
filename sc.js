@@ -209,15 +209,17 @@ robot.on("messageDelete", (msg) => {
 });                                    
 
 
-robot.on('message', message => {
-    if(message.content === ('<@405258156063850497>')) {
-try {
-	    message.reply("В ближайшее время Чаек ответик на ваше упоминание")
-} catch (err) {
- message.reply("Не надо меня ломать, Чаек будет плакать")
-	     
-    };
-   };
-});
+
+
+robot.on("message", (msg) => {
+  if(typeof msg.mentions.members[0] != "undefined"){
+    msg.mentions.members.forEach((id, val) => {
+      if(id == 405258156063850497){
+        message.reply("Чаек в ближайшее время ответит на ваше упоминание")
+        break
+      }
+    })
+  }
+})
 
 robot.login(process.env.BOT_TOKEN);
