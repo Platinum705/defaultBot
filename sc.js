@@ -208,10 +208,13 @@ robot.on("messageDelete", (msg) => {
 
 robot.on('message', message => {
     if(message.content === ('<@405258156063850497>')) {
+try {
 	    message.reply("В ближайшее время Чаек ответик на ваше упоминание")
-
+} else {
+ message.reply("Не надо меня ломать, Чаек будет плакать")
 	     
-    }
+    };
+   };
 });
 
 robot.login(process.env.BOT_TOKEN);
