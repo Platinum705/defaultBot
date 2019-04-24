@@ -208,7 +208,7 @@ robot.on("messageDelete", (msg) => {
 
 robot.on('message', message => {
     if(message.content === ('<@405258156063850497>')) {
-	    message.reply("На данный момент Чаёк грызет гранит науки")
+	    message.reply("В ближайшее время Чаек ответик на ваше упоминание")
 
 	     
     }
