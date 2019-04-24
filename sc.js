@@ -211,7 +211,7 @@ robot.on("messageDelete", (msg) => {
 robot.on("message", (msg) => {
 
   if(typeof msg.mentions.members[0] != "undefined"){
-try {
+
     msg.mentions.members.forEach((id, val) => {
       if(id == 405258156063850497){
         message.reply("Чаек в ближайшее время ответит на ваше упоминание")
@@ -219,9 +219,8 @@ try {
       }
     })
   }
-} catch (err) {
-message.reply("Не надо ломать меня, я плакать буду")
-}
+
+
 })
 
 robot.login(process.env.BOT_TOKEN);
