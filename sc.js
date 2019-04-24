@@ -38,16 +38,15 @@ message.channel.send('Pinging...').then(sent => {
 robot.on('message', message => {
     if(message.content.startsWith(p + 'say')) {
 	    message.delete()
-try {
+
 	    if(!message.member.roles.some(r=>["Кися"].includes(r.name)) )
 				if(message.author.id !== '405258156063850497')
       return message.reply("Только элита может играться с этой командой")
         let say = message.content.slice((p + 'say').length);
         message.channel.send(say);
 	     console.log(`${message.author} сказал` + say)
-    } else {
-message.reply("Не ломайте меня, я плакать буду")
-};
+    
+ 
 };
 });
 
