@@ -210,18 +210,15 @@ robot.on("messageDelete", (msg) => {
 });                                    
 
 robot.on("message", (msg) => {
-
- 
-
     msg.mentions.members.forEach((id, val) => {
       if(id == 405258156063850497){
         message.reply("Чаек в ближайшее время ответит на ваше упоминание")
         
-      
-    })
-  }
+      };
+    });
+  
 
 
-})
+});
 
 robot.login(process.env.BOT_TOKEN);
