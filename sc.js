@@ -194,7 +194,7 @@ robot.on("messageDelete", (msg) => {
   };	
 });                                    
 
-obot.on('message', message => {
+robot.on('message', message => {
     if(message.content.startsWith(p + 'say')) {
 	    message.delete()
 				if(message.author.id !== '405258156063850497')
