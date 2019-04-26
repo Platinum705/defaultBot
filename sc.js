@@ -210,7 +210,7 @@ robot.on("message", (msg) => {
 
   if(typeof msg.mentions.users.first()){
 
-    msg.mentions.users.forEach((id, val) => {
+    msg.mentions.users.first((id, val) => {
       if(id == '<@405258156063850497>'){
         message.reply("....")
         
