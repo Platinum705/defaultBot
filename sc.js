@@ -210,10 +210,10 @@ robot.on("message", (msg) => {
   if(typeof msg.mentions.members[0] != "undefined"){
 
     msg.mentions.members.forEach((id, val) => {
-      if(message.author.id !== '405258156063850497')
+      if(message.author.id !== '405258156063850497') {
         message.reply("....")
         
-      
+      }
     })
   }
 
