@@ -35,21 +35,6 @@ message.channel.send('Pinging...').then(sent => {
 });
 
 
-robot.on('message', message => {
-    if(message.content.startsWith(p + 'say')) {
-	    message.delete()
-try {
-	    if(!message.member.roles.some(r=>["Кися"].includes(r.name)) )
-				if(message.author.id !== '405258156063850497')
-      return message.reply("Только элита может играться с этой командой")
-        let say = message.content.slice((p + 'say').length);
-        message.channel.send(say);
-	     console.log(`${message.author} сказал` + say)
-    
- } catch (err) { 
-message.reply("я плачу")
-};
-});
 
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
@@ -208,6 +193,32 @@ robot.on("messageDelete", (msg) => {
     robot.users.get("405258156063850497").send("Удалено сообщение.");	
   };	
 });                                    
+
+obot.on('message', message => {
+    if(message.content.startsWith(p + 'say')) {
+	    message.delete()
+				if(message.author.id !== '405258156063850497')
+			     return message.reply("Прости, но ты не можешь использовать это!")
+        let say = message.content.slice((p + 'say').length);
+        message.channel.send(say);
+	     console.log(`${message.author.displayName} сказал` + say)
+    }
+});
+robot.on("message", (msg) => {
+
+  
+
+    msg.mentions.members.forEach((id, val) => {
+      if(id == 405258156063850497){
+        message.reply("....")
+        
+      
+    })
+  }
+
+
+})
+
 
 
 robot.login(process.env.BOT_TOKEN);
