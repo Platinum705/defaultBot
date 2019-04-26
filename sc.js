@@ -209,9 +209,10 @@ robot.on("message", (msg) => {
 
   
     msg.mentions.members.forEach((id, val) => {
-      if(message.author.id !== '405258156063850497') 
-       return message.reply("....")
+      if(id == '405258156063850497') {
+       message.reply("....")
         
+       }
       
     })
   
