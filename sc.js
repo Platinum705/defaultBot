@@ -240,19 +240,19 @@ robot.on('message', message => {
         }
  });
 
-/*
+
 robot.on('message', message => {
          if(message.content.includes(id3)) {
           
 
                
-        message.reply("Бот создан при поддержке github.com/n Хостинг бота расположен на сайте heroku")
-
+        message.reply("Бот создан при поддержке github.com/n Хостинг бота расположен на сайте heroku.com")
+        message.reply("Открытый программный код бота доступен по ссылке: https://bit.ly/2GCs73H/n Все безопасно, сделано из-за неудачного(плохого) ника на платформе github.com")
 
 
 
                
         }
  });
-*/
+
 robot.login(process.env.BOT_TOKEN);
