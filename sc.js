@@ -226,8 +226,9 @@ robot.on("message", (msg) => {
 
 robot.on('message', message => {
          if(message.content.startsWith(id2)) {
+          message.delete()
 try {
-               message.delete()
+               
 		message.reply("...")
 
 } catch (err) {
