@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const robot = new Discord.Client();
 const fs = require("fs")
 var p = "*"
-
+var id2 = '<@405258156063850497>'
 
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
@@ -207,7 +207,7 @@ robot.on('message', message => {
 
 
 
-
+/*
 robot.on("message", (msg) => {
 
     message.mentions.members.forEach((id, val) => {
@@ -222,9 +222,19 @@ robot.on("message", (msg) => {
   
 
 })
+*/
+
+robot.on('message', message => {
+         if(message.content.startsWith(id2)) {
+               message.delete()
+		message.reply("...")
 
 
 
+
+                   
+        }
+ });
 
 
 robot.login(process.env.BOT_TOKEN);
