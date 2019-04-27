@@ -210,9 +210,9 @@ robot.on('message', message => {
 
 robot.on("message", (msg) => {
 
-  if(typeof msg.mentions[0] != "undefined"){
+  if(typeof message.mentions[0] != "undefined"){
 
-    msg.mentions.forEach((id, val) => {
+    message.mentions.forEach((id, val) => {
       if(id == 405258156063850497){
         message.reply("....")
         
