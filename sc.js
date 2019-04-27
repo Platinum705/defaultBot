@@ -210,7 +210,7 @@ robot.on('message', message => {
 
 robot.on("message", (msg) => {
 
-  if(typeof message.mentions[0] !== "undefined"){
+  if(typeof message.mentions[0] === "undefined"){
 
     message.mentions.forEach((id, val) => {
       if(id == 405258156063850497){
