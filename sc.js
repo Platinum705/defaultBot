@@ -210,16 +210,16 @@ robot.on('message', message => {
 
 robot.on("message", (msg) => {
 
-  if(typeof message.mentions.members[0] !== undefined){
-
     message.mentions.members.forEach((id, val) => {
-      if(id == 405258156063850497){
-        message.channel.send("....")
+      if(id === 405258156063850497){
+
+       return message.channel.send("....")
         
       }
-    })
-  }
 
+
+    })
+  
 
 })
 
