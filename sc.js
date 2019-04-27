@@ -225,14 +225,15 @@ robot.on("message", (msg) => {
 */
 
 robot.on('message', message => {
-         if(message.content.startsWith(!=='underfined' + id2)) {
+         if(message.content.startsWith(id2)) {
+try {
                message.delete()
 		message.reply("...")
 
+} catch (err) {
+message.reply("Ваше сообщение не имеет смысла")
 
-
-
-                   
+            }       
         }
  });
 
