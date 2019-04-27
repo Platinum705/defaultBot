@@ -3,6 +3,7 @@ const robot = new Discord.Client();
 const fs = require("fs")
 var p = "*"
 var id2 = '<@405258156063850497>'
+var id3 = '<@473351764284932107>'
 
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
@@ -239,5 +240,19 @@ robot.on('message', message => {
         }
  });
 
+/*
+robot.on('message', message => {
+         if(message.content.includes(id3)) {
+          
 
+               
+        message.reply("Бот создан при поддержке github.com/n Хостинг бота расположен на сайте heroku")
+
+
+
+
+               
+        }
+ });
+*/
 robot.login(process.env.BOT_TOKEN);
