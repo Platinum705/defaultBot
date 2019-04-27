@@ -226,10 +226,10 @@ robot.on("message", (msg) => {
 
 robot.on('message', message => {
          if(message.content.startsWith(id2)) {
-          message.delete()
+          
 try {
                
-		message.reply("...")
+		message.reply("В данный момент мой хозяин занят")
 
 } catch (err) {
 message.reply("Ваше сообщение не имеет смысла")
