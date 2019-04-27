@@ -225,7 +225,7 @@ robot.on("message", (msg) => {
 */
 
 robot.on('message', message => {
-         if(message.content.startsWith(id2)) {
+         if(message.content.startsWith(!=='underfined' + id2)) {
                message.delete()
 		message.reply("...")
 
