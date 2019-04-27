@@ -224,17 +224,18 @@ robot.on("message", (msg) => {
 })
 */
 
+
 robot.on('message', message => {
-         if(message.content.startsWith(id2)) {
+         if(message.content.includes(id2)) {
           
-try {
+
                
-		message.reply("В данный момент мой хозяин занят")
+        message.reply("В данный момент мой хозяин занят")
 
-} catch (err) {
-message.reply("Ваше сообщение не имеет смысла")
 
-            }       
+
+
+               
         }
  });
 
