@@ -206,12 +206,14 @@ robot.on('message', message => {
 });
 
 
+
+
 robot.on("message", (msg) => {
 
-  if(typeof msg.mentions.users.first()){
+  if(typeof msg.mentions[0] != "undefined"){
 
-    msg.mentions.users.first((id, val) => {
-      if(id == '<@405258156063850497>'){
+    msg.mentions.forEach((id, val) => {
+      if(id == 405258156063850497){
         message.reply("....")
         
       }
