@@ -3,7 +3,7 @@ const robot = new Discord.Client();
 const fs = require("fs")
 var p = "*"
 var id2 = '<@405258156063850497>'
-var user = message.user.id 
+var user = message.author.id 
 
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
