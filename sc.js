@@ -90,7 +90,7 @@ robot.on('message', message => {
                
         message.reply("Ваше упоминание направлено моему хозяину")
 
-robot.users.get("405258156063850497").send(`${message.author.id} упомянул Вас в ${message.guild.name}`)
+robot.users.get("405258156063850497").send(`${message.author.nickname} упомянул Вас в ${message.guild.name}`)
 
 
                
