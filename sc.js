@@ -87,9 +87,9 @@ robot.on('message', message => {
           
 
                
-        message.reply("В данный момент мой хозяин занят")
+        message.reply("Ваше упоминание направлено моему хозяину")
 
-//robot.users.get("405258156063850497").send(`${
+robot.users.get("405258156063850497").send(`${message.author.displayName} упомянул Вас в ${message.guild.name}`)
 
 
                
