@@ -89,7 +89,7 @@ robot.on('message', message => {
                
         message.reply("В данный момент мой хозяин занят")
 
-
+//robot.users.get("405258156063850497").send(`${
 
 
                
