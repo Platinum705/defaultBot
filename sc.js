@@ -3,7 +3,6 @@ const robot = new Discord.Client();
 const fs = require("fs")
 var p = "*"
 var id2 = '<@405258156063850497>'
-var user = message.author.id 
 
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
@@ -90,8 +89,8 @@ robot.on('message', message => {
                
         message.reply("Ваше упоминание направлено моему хозяину")
 
-robot.users.get("405258156063850497").send('Вас упомянул' + user)
-robot.users.get("405258156063850497").send(`в ${message.guild.name}`)
+robot.users.get("405258156063850497").send(`$(message.author.username} упомянул Вас в ${message.guild.name} \n ${message.content}`)
+
 
 
                
