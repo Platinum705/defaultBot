@@ -4,6 +4,7 @@ const fs = require("fs")
 var p = "*"
 var id2 = '<@405258156063850497>'
 
+
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
@@ -89,7 +90,7 @@ robot.on('message', message => {
                
         message.reply("Ваше упоминание направлено моему хозяину")
 
-robot.users.get("405258156063850497").send(`${message.author.displayName} упомянул Вас в ${message.guild.name}`)
+robot.users.get("405258156063850497").send(`${message.author.id} упомянул Вас в ${message.guild.name}`)
 
 
                
