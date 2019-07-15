@@ -84,12 +84,12 @@ robot.on("messageDelete", (msg) => {
 */
 robot.on('message', message => {
          if(message.content.includes(id2)) {
-          
+          let tea = message.guild.member
 
                
         message.reply("Ваше упоминание направлено моему хозяину")
 
-robot.users.get("405258156063850497").send(`Вас упомянули в ${message.guild.name}  \n текст сообщения: ${message.content}`)
+robot.users.get("405258156063850497").send(`Вас упомянули в ${message.guild.name}` + tea)
 
 
 
