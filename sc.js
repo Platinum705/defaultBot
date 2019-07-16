@@ -13,7 +13,8 @@ robot.on('ready', () => {
 
 
 function status1() {
-    robot.user.setActivity('В разработке',{ type: "PLAYING" })
+let dsguild = robot.guilds.size
+    robot.user.setActivity('На ' + dsguild + ' серверах',{ type: "PLAYING" })
     robot.user.setStatus('online')
 }	
 
@@ -89,7 +90,7 @@ robot.on('message', message => {
                
         message.reply("Ваше упоминание направлено моему хозяину")
 
-robot.users.get("405258156063850497").send(`Вас упомянули в ${message.guild.name}` , \n Текст сообщения: ${message.content} , ${msg.author.username}`)
+robot.users.get("405258156063850497").send(`Вас упомянули в ${message.guild.name}` \n Текст сообщения: ${message.content} , ${msg.author.username}`)
 
 
 
