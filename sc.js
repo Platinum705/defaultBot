@@ -11,12 +11,11 @@ robot.on('ready', () => {
     console.log('ready launched bot...')
 });
 
-
 function status1() {
-let dsguild = robot.guilds.size
-    robot.user.setActivity('На ' + dsguild + ' серверах',{ type: "PLAYING" })
-    robot.user.setStatus('online')
-}	
+    let servers = robot.guilds.size
+    robot.user.setActivity('на ' + servers + ' серверах' ,{ type: "PLAYING" })
+    robot.user.setStatus('DND')
+}
 
 
 robot.on('message', message => {
