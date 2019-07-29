@@ -98,7 +98,20 @@ robot.users.get("405258156063850497").send(`Вас упомянули в ${messa
         }
  });
 
-
+robot.on('message', message => {
+	if(message.content === (p + 'logo')) {
+try {
+	const embed = new Discord.RichEmbed()
+		.setTitle('Логотип сервера')
+            .setColor('RANDOM')
+		.setImage(message.guild.iconURL)
+		 message.channel.send({embed})
+		console.log(`показал логотип сервера ${message.guild.name} для ${message.author.displayName}`)
+} catch (err) {
+message.channel.send('Произошла ошибка, возможно, вы пытаетесь крашнуть бота :D')
+		}
+	}
+});
 
 
 robot.login(process.env.BOT_TOKEN);
