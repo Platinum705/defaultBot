@@ -158,6 +158,27 @@ robot.on('message', message => {
     }
 });
 
+robot.on('message', message => {
+	const args = message.content.slice(p.length).trim().split(/ +/g);
+	const command = args.shift().toLowerCase();
+	if(message.content.startsWith(p + 'poll')) {
+		message.delete().catch(O_o => {});
+		const say_poll_embed = args.join(" ");
+		const embed = new Discord.RichEmbed()
+			.setColor(`#00FFFF`)
+			.setDescription(say_poll_embed)
+			.setFooter("голосование|Tess bot")
+			.setTimestamp();	
+            message.channel.send({
+                embed
+            }).then(function(message) {
+                message.react("✅")
+                message.react("❎")
+            }).catch(function() {});
+        }
+    }); 
+
+
 
 
 robot.login(process.env.BOT_TOKEN);
