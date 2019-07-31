@@ -88,19 +88,15 @@ robot.on("messageDelete", (msg) => {
 robot.on('message', message => {
          if(message.content.includes(id2)) {
           
-          
+                       
 
-
-               
-        message.reply("Ваше упоминание направлено моему хозяину")
-
-robot.users.get("405258156063850497").send(`${message.author.username} упомянул вас в \n  Текст сообщения: ${message.content}`)
+robot.users.get("405258156063850497").send(`${message.author.username} упомянул вас \n  Текст сообщения: ${message.content}`)
 
 
 
                
         }
-break
+
  });
 
 robot.on('message', message => {
