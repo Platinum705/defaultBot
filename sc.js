@@ -3,7 +3,7 @@ const robot = new Discord.Client();
 const fs = require("fs");
 const client = new Discord.Client();
 const bot = new Discord.Client();
-var p = "*"
+var p = "tess!" || "Tess!"
 var id2 = '<@405258156063850497>'
 
 
