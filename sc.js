@@ -87,7 +87,7 @@ robot.on("messageDelete", (msg) => {
 */
 robot.on('message', message => {
          if(message.content.includes(id2)) {
-          if(message.author.id == '466896060682469377')
+          if(message.author.id == '466896060682469377') {
 			     console.log("anticrash")
                        
 
