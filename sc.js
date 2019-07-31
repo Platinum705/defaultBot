@@ -35,17 +35,17 @@ message.channel.send('Pinging...').then(sent => {
 
 robot.on('message', message => {
 	if(message.content.startsWith(p + 'avatar')) {
-		
+try {
+var mentions1 = message.mentions
 		const embed = new Discord.RichEmbed()
 		.setTitle('Аватар пользователя:')
             .setColor('RANDOM')
 		 .setImage(message.mentions.users.first().avatarURL)
 		 message.channel.send({embed})
-		
-		
-		
-		console.log(`${message.author.displayName} узнает аватарки`)
-		
+		console.log(`показал аватар ${mentions1[0]} для ${message.author.displayName} в ${message.guild.name}`)
+} catch (err) {
+message.channel.send('Ты уверен что это человек имеет аватарку?')
+		}
 	}
 });
 
