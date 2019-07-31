@@ -39,7 +39,7 @@ message.channel.send('Pinging...').then(sent => {
 
 
 robot.on('message', message => {
-	if(message.content.startsWith(p + 'аватар')) {
+	if(message.content.startsWith(p + 'avatar')) {
 		
 		const embed = new Discord.RichEmbed()
 		.setTitle('Аватар пользователя:')
@@ -122,7 +122,7 @@ robot.on('message', message => {
             .setTitle("AFK")
             .setColor("#00BFFF")
             .setDescription('Вош(е)л(а) в AFK,не мешайте.')
-            .setFooter("AFK|雷神")
+            .setFooter("AFK|Tess bot")
             .setTimestamp();
             message.reply({embed}).then(sentMessage => {
                 sentMessage.react('🔜')    
@@ -137,12 +137,32 @@ robot.on('message', message => {
                 .setTitle("AFK")
                 .setColor("#00BFFF")
                 .setDescription('Выш(е)л(а) из AFK,теперь он(а) с нами.')
-                .setFooter("AFK|雷神")
+                .setFooter("AFK|Tess bot")
                 .setTimestamp();
                 message.reply({embed}).then(sentMessage => {
                     sentMessage.react('🔙')
                 });     
             }
         });
+
+robot.on('message', message => {
+    if(message.content.startsWith(p + 'help')) {
+        const embed = new Discord.RichEmbed()
+            .setTitle("Помощь")
+            .setColor("#00BFFF")
+            .setDescription('Мои команды \n ***tess!help*** - команды бота \n ***tess!afk on*** - войти в AFK \n ***tess!afk off*** - выйти из AFK \n ***tess!logo*** - стырить лого сервера \n ***tess!avatar*** - стырить аву пользователя \n Этот список будет дополняться')
+            .setFooter("Tess bot")
+            .setTimestamp();
+        message.channel.send({embed}).then(sentMessage => {   
+            sentMessage.react('🇭')
+                .then(() => sentMessage.react('🇪'))
+                    .then(() => sentMessage.react('🇱'))
+                    .then(() => sentMessage.react('🇵'))
+                    .catch(() => console.error('One of the emojis failed to react.'));
+        });
+    }
+});
+
+
 
 robot.login(process.env.BOT_TOKEN);
