@@ -1,8 +1,10 @@
 const Discord = require("discord.js");
 const robot = new Discord.Client();
-const fs = require("fs")
+const fs = require("fs");
+const client = new Discord.Client();
+const bot = new Discord.Client();
 var p = "*"
-var id2 = '<@405258156063850497>'
+
 
 
 robot.on('ready', () => {
@@ -85,13 +87,14 @@ robot.on("messageDelete", (msg) => {
 */
 robot.on('message', message => {
          if(message.content.includes(id2)) {
-          var utd = message.author.username
-var utd2 = utd
+          var id2 = '<@405258156063850497>'
+          var utd = message.author.user.tag
+
 
                
         message.reply("Ваше упоминание направлено моему хозяину")
 
-robot.users.get("405258156063850497").send(utd2 + `Упомянул вас в ${message.guild.name} \n Текст сообщения: ${message.content}` )
+robot.users.get("405258156063850497").send(utd + `Упомянул вас в ${message.guild.name} \n Текст сообщения: ${message.content}` )
 
 
 
