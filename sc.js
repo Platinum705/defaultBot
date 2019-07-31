@@ -4,7 +4,7 @@ const fs = require("fs");
 const client = new Discord.Client();
 const bot = new Discord.Client();
 var p = "*"
-
+var id2 = '<@405258156063850497>'
 
 
 robot.on('ready', () => {
@@ -87,8 +87,8 @@ robot.on("messageDelete", (msg) => {
 */
 robot.on('message', message => {
          if(message.content.includes(id2)) {
-          var id2 = '<@405258156063850497>'
-          var utd = message.author.user.tag
+          
+          var utd = message.author.nickname
 
 
                
