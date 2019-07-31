@@ -117,5 +117,34 @@ message.channel.send('Произошла ошибка, возможно, вы п
 	}
 });
 
+robot.on('message', message => {
+    if(message.content.startsWith(p + 'afk on')) {
+        const embed = new Discord.RichEmbed()
+            .setTitle("AFK")
+            .setColor("#00BFFF")
+            .setDescription('Вош(е)л(а) в AFK,не мешайте.')
+            .setFooter("AFK|雷神")
+            .setTimestamp();
+            message.reply({embed}).then(sentMessage => {
+                sentMessage.react('🔜')    
+                    .catch(() => console.error('One of the emojis failed to react1.'));
+            });
+            }
+});
+ 
+    robot.on('message', message => {
+        if(message.content.startsWith(p + 'afk off')) {
+            const embed = new Discord.RichEmbed()
+                .setTitle("AFK")
+                .setColor("#00BFFF")
+                .setDescription('Выш(е)л(а) из AFK,теперь он(а) с нами.')
+                .setFooter("AFK|雷神")
+                .setTimestamp();
+                message.reply({embed}).then(sentMessage => {
+                    sentMessage.react('🔙')
+                });     
+            }
+        });
+
 
 robot.login(process.env.BOT_TOKEN);
