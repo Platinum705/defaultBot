@@ -15,9 +15,9 @@ robot.on('ready', () => {
 });
 
 function status1() {
-    robot.user.setActivity('dragon nest mobile',{ type: "PLAYING" })
-    robot.user.setStatus('online')
-	
+    let servers = robot.guilds.size
+    robot.user.setActivity('на ' + servers + ' серверах' ,{ type: "PLAYING" })
+    robot.user.setStatus('DND')
 }
 
 
