@@ -172,8 +172,8 @@ robot.on('message', message => {
             message.channel.send({
                 embed
             }).then(function(message) {
-                message.react(":one:")
-                message.react(":two:")
+                message.react("1️⃣")
+                message.react("2️⃣")
             }).catch(function() {});
         }
     }); 
