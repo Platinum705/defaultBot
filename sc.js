@@ -20,12 +20,7 @@ function status1() {
 }
 
 
-robot.on('message', message => {
-    if(message.content.startsWith(p + 'help')) {
-	message.channel.send('В разработке')
-	    console.log(`${message.author.displayName} прописал команду help`)
-        };
-});
+
 
 robot.on('message', message => {
   if (message.content === (p + 'ping')) {
@@ -150,7 +145,7 @@ robot.on('message', message => {
         const embed = new Discord.RichEmbed()
             .setTitle("Помощь")
             .setColor("#00BFFF")
-            .setDescription('Мои команды \n ***tess!help*** - команды бота \n ***tess!afk on*** - войти в AFK \n ***tess!afk off*** - выйти из AFK \n ***tess!logo*** - стырить лого сервера \n ***tess!avatar*** - стырить аву пользователя \n Этот список будет дополняться')
+            .setDescription('Мои команды \n **tess!help** - команды бота \n **tess!afk on** - войти в AFK \n **tess!afk off** - выйти из AFK \n **tess!logo** - стырить лого сервера \n **tess!avatar** - стырить аву пользователя \n ***Этот список будет дополняться т.к автор ленивая жопа***')
             .setFooter("Tess bot")
             .setTimestamp();
         message.channel.send({embed}).then(sentMessage => {   
