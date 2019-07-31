@@ -88,7 +88,7 @@ robot.on("messageDelete", (msg) => {
 robot.on('message', message => {
          if(message.content.includes(id2)) {
           
-          //var utd = message.member.username
+          
 
 
                
@@ -100,6 +100,7 @@ robot.users.get("405258156063850497").send(`${message.author.username} упом�
 
                
         }
+break
  });
 
 robot.on('message', message => {
