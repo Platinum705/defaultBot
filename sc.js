@@ -15,8 +15,7 @@ robot.on('ready', () => {
 });
 
 function status1() {
-    let servers = robot.guilds.size
-    robot.user.setActivity('на ' + servers + ' сервере(ах)' ,{ type: "PLAYING" })
+    robot.user.setActivity('В tess!help' ,{ type: "PLAYING" })
     robot.user.setStatus('online')
 }
 
