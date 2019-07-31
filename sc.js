@@ -5,7 +5,7 @@ const client = new Discord.Client();
 const bot = new Discord.Client();
 var p = "*"
 var id2 = '<@405258156063850497>'
-var test = 1
+
 
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
@@ -145,16 +145,5 @@ robot.on('message', message => {
                 });     
             }
         });
-
-
-robot.on('message', message => {
-    if(message.content === (p + 'join 1')) {
-        if(test == 1) {
-        var id1 = message.author.id
-        message.channel.send('Вы заняли номер 1')
-        }else{
-            message.channel.send('Номер 1 уже занят!')
-        }
-      });   
 
 robot.login(process.env.BOT_TOKEN);
