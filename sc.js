@@ -162,6 +162,7 @@ robot.on('message', message => {
 	const args = message.content.slice(p.length).trim().split(/ +/g);
 	const command = args.shift().toLowerCase();
 	if(message.content.startsWith(p + 'poll')) {
+
 		message.delete().catch(O_o => {});
 		const say_poll_embed = args.join(" ");
 		const embed = new Discord.RichEmbed()
@@ -172,8 +173,8 @@ robot.on('message', message => {
             message.channel.send({
                 embed
             }).then(function(message) {
-                message.react("✅")
-                message.react("❎")
+                message.react(robot.emojis.find(emoji => emoji.name === "one"));
+                message.react(robot.emojis.find(emoji => emoji.name === "two")); 
             }).catch(function() {});
         }
     }); 
