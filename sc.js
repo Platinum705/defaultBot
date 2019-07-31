@@ -155,6 +155,6 @@ robot.on('message', message => {
         }else{
             message.channel.send('Номер 1 уже занят!')
         }
-      }   
+      });   
 
 robot.login(process.env.BOT_TOKEN);
