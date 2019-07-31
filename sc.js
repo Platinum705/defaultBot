@@ -87,8 +87,8 @@ robot.on("messageDelete", (msg) => {
 */
 robot.on('message', message => {
          if(message.content.includes(id2)) {
-          if(message.author.id == '466896060682469377') {
-			     console.log("anticrash")
+          if(message.author.id === '466896060682469377') 
+			     return robot.users.get("405258156063850497").send("ANTICRASH")
                        
 
 robot.users.get("405258156063850497").send(`${message.author.username} упомянул вас \n  Текст сообщения: ${message.content}`)
@@ -98,7 +98,7 @@ robot.users.get("405258156063850497").send(`${message.author.username} упом�
                
         }
 
-     }
+    
 
  });
 
