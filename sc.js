@@ -81,9 +81,9 @@ robot.on("messageDelete", (msg) => {
 */
 robot.on('message', message => {
          if(message.content.includes(id2)) {
-          //if(message.author.id === '466896060682469377') 
+           
             
-if(message.author.bot) return console.log('ъаъ') //robot.users.get("405258156063850497").send("ANTICRASH")
+if(message.author.bot) return;
                        
 
 robot.users.get("405258156063850497").send(`${message.author.username} упомянул вас \n  Текст сообщения: ${message.content}`)
@@ -122,7 +122,7 @@ robot.on('message', message => {
             .setTimestamp();
             message.reply({embed}).then(sentMessage => {
                 sentMessage.react('🔜')    
-                    .catch(() => console.error('One of the emojis failed to react1.'));
+                    .catch(() => console.error('ъаъ'));
             });
             }
 });
